@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Galaxy S23</title>
+    <link rel="stylesheet" href="23.css">
+</head>
+<body>
+    <header>
+        <h1>Интернет-магазин</h1>
+    </header>
+
+    <main>
+        <section class="product">
+            <img id="product-img" src="23.jpg" alt="Samsung Galaxy S23">
+            <h2>Смартфон Samsung Galaxy S23</h2>
+            <p class="price" id="price">450 000 ₸</p>
+
+            <div class="colors">
+                <span>Цвет:</span>
+                <button class="color black" onclick="changeColor('black')"></button>
+                <button class="color green" onclick="changeColor('green')"></button>
+                <button class="color lavender" onclick="changeColor('lavender')"></button>
+            </div>
+
+            <div class="memory">
+                <span>Объем памяти:</span>
+                <button class="memory-btn" onclick="updatePrice(450000)">128 GB</button>
+                <button class="memory-btn" onclick="updatePrice(490000)">256 GB</button>
+                <button class="memory-btn" onclick="updatePrice(530000)">512 GB</button>
+            </div>
+
+            <button class="buy-btn">Купить сейчас</button>
+            <button class="cart-btn">В корзину</button>
+        </section>
+
+        <section class="specs">
+            <h3>Характеристики</h3>
+            <ul>
+                <li>Год выпуска: 2023</li>
+                <li>Диагональ: 6.1 дюйма</li>
+                <li>Разрешение: 2340×1080</li>
+                <li>Тип экрана: Dynamic AMOLED 2X</li>
+                <li>Процессор: Snapdragon 8 Gen 2</li>
+                <li>Оперативная память: 8 GB</li>
+                <li>Основная камера: 50+12+10 МП</li>
+                <li>Фронтальная камера: 12 МП</li>
+                <li>Батарея: 3900 мАч</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Интернет-магазин</p>
+    </footer>
+
+    <script>
+        function updatePrice(price) {
+            document.getElementById("price").textContent = price + " ₸";
+        }
+
+        function changeColor(color) {
+            let img = document.getElementById("product-img");
+            if (color === 'black') {
+                img.src = "23b.jpg";
+            } else if (color === 'green') {
+                img.src = "23g.jpg";
+            } else if (color === 'lavender') {
+                img.src = "23l.jpg";
+            }
+        }
+    </script>
+
+</body>
+</html>
